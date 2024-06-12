@@ -15,7 +15,7 @@ export default function Carousel() {
     setFormData({ ...formData, [name]: value });
   };
   const scriptUrl =
-    "https://script.google.com/macros/s/AKfycby1kPe-aoysg5Kj9HZ6J7o9maO_Y18VSNt1vxwYOZL3FbkrlrMZb_JJF59V7ovpEw9DVg/exec";
+    "https://script.google.com/macros/s/AKfycbwzEHOGkV4dCg4-CDEcOCROEopdzhMJsFMQwolyBM7Iwg-KdoX8iGqOczLvBh8pn_5Iwg/exec";
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
