@@ -14,8 +14,10 @@ export default function Carousel() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
   const scriptUrl =
     "https://script.google.com/macros/s/AKfycbwzEHOGkV4dCg4-CDEcOCROEopdzhMJsFMQwolyBM7Iwg-KdoX8iGqOczLvBh8pn_5Iwg/exec";
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -28,6 +30,7 @@ export default function Carousel() {
       });
       const result = await response.text();
       alert("Form submitted successfully!");
+      setFormData({ Name: "", Email: "", Phone: "", Target: "", Program: "" }); // Reset form data
     } catch (error) {
       console.error("Error:", error);
       alert("Failed to submit form. Please try again later.");
@@ -61,9 +64,9 @@ export default function Carousel() {
                 width="640"
                 height="152"
                 src="https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-1024x243.png"
-                class="attachment-large size-large wp-image-8936"
+                className="attachment-large size-large wp-image-8936"
                 alt=""
-                srcset="https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-1024x243.png 1024w, https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-600x143.png 600w, https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-e1661395790159.png 300w, https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-768x183.png 768w, https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-1536x365.png 1536w, https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-2048x487.png 2048w"
+                srcSet="https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-1024x243.png 1024w, https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-600x143.png 600w, https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-e1661395790159.png 300w, https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-768x183.png 768w, https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-1536x365.png 1536w, https://ispace.edu.vn/wp-content/uploads/2020/09/logo-logo-01-2048x487.png 2048w"
                 sizes="(max-width: 640px) 100vw, 640px"
               />
             </li>
